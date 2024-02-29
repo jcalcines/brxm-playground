@@ -1,0 +1,5 @@
+group: 
+  name: playground
+project: playground
+module:
+  name: playground-repository-data-webfiles

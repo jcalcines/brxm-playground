@@ -1,0 +1,5 @@
+definitions:
+  namespace:
+    playground:
+      uri: http://www.playground.com/playground/nt/1.0
+      cnd: namespaces/playground.cnd

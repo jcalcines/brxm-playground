@@ -1,0 +1,6 @@
+site: playground
+group: playground
+project: playground
+module:
+  name: playground-repository-data-site-development
+  after: playground-repository-data-site

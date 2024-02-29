@@ -1,0 +1,4 @@
+definitions:
+  config:
+    /hst:hst/hst:configurations/playground/hst:abstractpages:
+      jcr:primaryType: hst:pages

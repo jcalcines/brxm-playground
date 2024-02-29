@@ -1,0 +1,7 @@
+group: 
+  name: playground
+  after: hippo-cms
+project: playground
+module: 
+  name: playground-repository-data-development
+  after: playground-repository-data-application

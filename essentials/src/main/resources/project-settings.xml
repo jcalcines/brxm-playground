@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<project>
+  <projectNamespace>playground</projectNamespace>
+  <confirmParams>false</confirmParams>
+  <selectedProjectPackage>com.visitscotland.demo</selectedProjectPackage>
+  <selectedBeansPackage>com.visitscotland.demo.beans</selectedBeansPackage>
+  <selectedComponentsPackage>com.visitscotland.demo.components</selectedComponentsPackage>
+  <selectedRestPackage>com.visitscotland.demo.rest</selectedRestPackage>
+  <hstRoot>/hst:playground</hstRoot>
+  <webfileBundleName>site</webfileBundleName>
+  <setupDone>false</setupDone>
+  <useSamples>true</useSamples>
+  <extraTemplates>true</extraTemplates>
+</project>

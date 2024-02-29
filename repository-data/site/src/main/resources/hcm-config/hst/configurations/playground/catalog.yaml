@@ -1,0 +1,6 @@
+definitions:
+  config:
+    /hst:hst/hst:configurations/playground/hst:catalog:
+      jcr:primaryType: hst:catalog
+      /playground-catalog:
+        jcr:primaryType: hst:containeritempackage
