@@ -1,0 +1,32 @@
+definitions:
+  config:
+    /hippo:configuration/hippo:translations/hippo:types/playground:contentdocument:
+      jcr:primaryType: hipposys:resourcebundles
+      /en:
+        jcr:primaryType: hipposys:resourcebundle
+        jcr:name: Simple Document
+        playground:content: Content
+        playground:introduction: Introduction
+        playground:publicationdate: Publication date
+        playground:title: Title
+      /nl:
+        jcr:primaryType: hipposys:resourcebundle
+        jcr:name: Eenvoudig Document
+        playground:content: Inhoud
+        playground:introduction: Introductie
+        playground:publicationdate: Publicatiedatum
+        playground:title: Titel
+      /fr:
+        jcr:primaryType: hipposys:resourcebundle
+        jcr:name: Document simple
+        playground:content: Contenu
+        playground:introduction: Introduction
+        playground:publicationdate: Date de publication
+        playground:title: Titre
+      /de:
+        jcr:primaryType: hipposys:resourcebundle
+        jcr:name: Einfaches Dokument
+        playground:content: Inhalt
+        playground:introduction: Einführung
+        playground:publicationdate: Publikationsdatum
+        playground:title: Titel

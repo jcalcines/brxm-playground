@@ -1,14 +1,23 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <project>
-  <projectNamespace>playground</projectNamespace>
-  <confirmParams>false</confirmParams>
-  <selectedProjectPackage>com.visitscotland.demo</selectedProjectPackage>
-  <selectedBeansPackage>com.visitscotland.demo.beans</selectedBeansPackage>
-  <selectedComponentsPackage>com.visitscotland.demo.components</selectedComponentsPackage>
-  <selectedRestPackage>com.visitscotland.demo.rest</selectedRestPackage>
-  <hstRoot>/hst:playground</hstRoot>
-  <webfileBundleName>site</webfileBundleName>
-  <setupDone>false</setupDone>
-  <useSamples>true</useSamples>
-  <extraTemplates>true</extraTemplates>
+    <applicationSubModule>application</applicationSubModule>
+    <cmsDependenciesModule>cms-dependencies</cmsDependenciesModule>
+    <cmsModule>cms</cmsModule>
+    <confirmParams>true</confirmParams>
+    <developmentSubModule>development</developmentSubModule>
+    <enterprise>false</enterprise>
+    <extraTemplates>false</extraTemplates>
+    <hstRoot>/hst:playground</hstRoot>
+    <projectNamespace>playground</projectNamespace>
+    <repositoryDataModule>repository-data</repositoryDataModule>
+    <selectedBeansPackage>com.visitscotland.demo.beans</selectedBeansPackage>
+    <selectedComponentsPackage>com.visitscotland.demo.components</selectedComponentsPackage>
+    <selectedProjectPackage>com.visitscotland.demo</selectedProjectPackage>
+    <selectedRestPackage>com.visitscotland.demo.rest</selectedRestPackage>
+    <setupDone>true</setupDone>
+    <siteContextPath>/site</siteContextPath>
+    <siteModule>site</siteModule>
+    <useSamples>true</useSamples>
+    <webfileBundleName>site</webfileBundleName>
+    <webfilesSubModule>webfiles</webfilesSubModule>
 </project>
