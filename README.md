@@ -6,6 +6,15 @@ This project acts a playground for testing features in an isolated environment.
 The idea is to create branches with different integrations and tools so we can not only see features in isolation but to 
 understand the differences with the original code
 
+Dependency check
+=======
+
+This is a work in progress
+
+Run the following command:
+
+    ~/Downloads/dependency-check-9.0.9-release/dependency-check/bin/dependency-check.sh --project "BloomReach Playground" --scan . 
+
 
 Running Locally
 ===============

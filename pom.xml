@@ -73,7 +73,25 @@
     <defaultGoal>package</defaultGoal>
     <pluginManagement>
       <plugins>
-
+        <plugin>
+          <groupId>org.owasp</groupId>
+          <artifactId>dependency-check-maven</artifactId>
+          <version>9.0.9</version>
+          <!--              <reportSets>-->
+          <!--                <reportSet>-->
+          <!--                  <reports>-->
+          <!--                    <report>aggregate</report>-->
+          <!--                  </reports>-->
+          <!--                </reportSet>-->
+          <!--              </reportSets>-->
+          <executions>
+            <execution>
+              <goals>
+                <goal>check</goal>
+              </goals>
+            </execution>
+          </executions>
+        </plugin>
       </plugins>
     </pluginManagement>
     <plugins>
