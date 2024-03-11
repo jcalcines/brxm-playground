@@ -78,8 +78,20 @@
           <artifactId>dependency-check-maven</artifactId>
           <version>9.0.9</version>
           <configuration>
-            <outputDirectory>report/owasp</outputDirectory>
+            <outputDirectory>report/owasp/</outputDirectory>
+            <suppressionFiles>
+              <file>src/main/resources/suppressed-cves.xml</file>
+            </suppressionFiles>
 
+            <excludes>
+              <!-- Note: we could have included the project dependency located at
+              [project-name]-essentials, but we included these dependencies instead so the
+              configuration can be copied to other projects -->
+              <exclude>org.onehippo.cms7:hippo-essentials-dashboard</exclude>
+              <exclude>org.onehippo.cms7:hippo-essentials-dashboard-dependencies</exclude>
+            </excludes>
+
+            <!-- JavaScript Dependencies are resolved via Node -->
             <nodeAnalyzerEnabled>false</nodeAnalyzerEnabled>
             <nodeAuditAnalyzerEnabled>false</nodeAuditAnalyzerEnabled>
             <retireJsAnalyzerEnabled>false</retireJsAnalyzerEnabled>
