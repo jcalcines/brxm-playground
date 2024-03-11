@@ -77,13 +77,13 @@
           <groupId>org.owasp</groupId>
           <artifactId>dependency-check-maven</artifactId>
           <version>9.0.9</version>
-          <!--              <reportSets>-->
-          <!--                <reportSet>-->
-          <!--                  <reports>-->
-          <!--                    <report>aggregate</report>-->
-          <!--                  </reports>-->
-          <!--                </reportSet>-->
-          <!--              </reportSets>-->
+          <configuration>
+            <outputDirectory>report/owasp</outputDirectory>
+
+            <nodeAnalyzerEnabled>false</nodeAnalyzerEnabled>
+            <nodeAuditAnalyzerEnabled>false</nodeAuditAnalyzerEnabled>
+            <retireJsAnalyzerEnabled>false</retireJsAnalyzerEnabled>
+          </configuration>
           <executions>
             <execution>
               <goals>
@@ -98,6 +98,23 @@
 
     </plugins>
   </build>
+
+<!--  <reporting>-->
+<!--    <plugins>-->
+<!--      <plugin>-->
+<!--        <groupId>org.owasp</groupId>-->
+<!--        <artifactId>dependency-check-maven</artifactId>-->
+<!--        <version>9.0.9</version>-->
+<!--        <reportSets>-->
+<!--          <reportSet>-->
+<!--            <reports>-->
+<!--              <report>aggregate</report>-->
+<!--            </reports>-->
+<!--          </reportSet>-->
+<!--        </reportSets>-->
+<!--      </plugin>-->
+<!--    </plugins>-->
+<!--  </reporting>-->
 
   <profiles>
     <profile>

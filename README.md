@@ -13,8 +13,9 @@ This is a work in progress
 
 Run the following command:
 
-    ~/Downloads/dependency-check-9.0.9-release/dependency-check/bin/dependency-check.sh --project "BloomReach Playground" --scan . 
+    ~/Downloads/dependency-check-9.0.9-release/dependency-check/bin/dependency-check.sh --project "BloomReach Playground" --scan .
 
+     mvn dependency-check:aggregate
 
 Running Locally
 ===============
