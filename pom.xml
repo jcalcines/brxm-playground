@@ -78,7 +78,7 @@
           <artifactId>dependency-check-maven</artifactId>
           <version>9.0.9</version>
           <configuration>
-            <outputDirectory>report/owasp/</outputDirectory>
+            <outputDirectory>report/owasp/${hippo.cms.version}</outputDirectory>
             <suppressionFiles>
               <file>src/main/resources/suppressed-cves.xml</file>
             </suppressionFiles>
