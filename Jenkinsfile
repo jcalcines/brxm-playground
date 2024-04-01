@@ -17,7 +17,7 @@ pipeline {
             steps {
                 echo 'Bulding the project'
                 mvn clean verify -DskipTests
-            }git
+            }
         }
         stage('Test') {
             steps {
