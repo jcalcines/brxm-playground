@@ -16,19 +16,19 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Bulding the project'
-                mvn clean verify -DskipTests
+                sh 'mvn clean verify -DskipTests'
             }
         }
         stage('Test') {
             steps {
                 echo 'Running Unit Test'
-                mvn test
+                sh 'mvn test'
             }
         }
         stage('Deploy') {
             steps {
                 echo 'Creating a distribution artefact'
-                mvn -P dist
+                sh 'mvn -Pdist'
             }
         }
     }
