@@ -3,9 +3,9 @@ def STAGE_MAVEN_DEPENDENCY_CHECK = false
 def STAGE_DEPENDENCY_CHECK = true
 
 pipeline {
-    agent {
-        docker { image 'docker maven:3.5.4-jdk-11'}
-    }
+    agent
+        //https://www.jenkins.io/doc/book/pipeline/docker/
+//        { docker { image 'docker maven:3.5.4-jdk-11'}}
 
 //    environment {
 //        MAVEN_SETTINGS = credentials('maven-settings')
@@ -13,10 +13,10 @@ pipeline {
 
 
 
-//    tools {
+    tools {
 //        maven 'Maven 3.5.4'
 //        jdk 'jdk11'
-//    }
+    }
 
     stages {
         stage('Build') {
