@@ -100,10 +100,6 @@
             <nodeAnalyzerEnabled>false</nodeAnalyzerEnabled>
             <nodeAuditAnalyzerEnabled>false</nodeAuditAnalyzerEnabled>
             <retireJsAnalyzerEnabled>false</retireJsAnalyzerEnabled>
-            <formats>
-              <format>HTML</format>
-              <format>XML</format>
-            </formats>
           </configuration>
           <executions>
             <execution>
@@ -124,18 +120,18 @@
 <!--    <plugins>-->
 <!--      <plugin>-->
 <!--        <groupId>org.owasp</groupId>-->
-<!--        <artifactId>dependency-check-maven</artifactId> -->
-<!--        <version>9.0.9</version> -->
-<!--        <reportSets> -->
-<!--          <reportSet> -->
-<!--            <reports> -->
-<!--              <report>aggregate</report> -->
-<!--            </reports> -->
-<!--          </reportSet> -->
-<!--        </reportSets> -->
-<!--      </plugin> -->
-<!--    </plugins> -->
-<!--  </reporting> -->
+<!--        <artifactId>dependency-check-maven</artifactId>-->
+<!--        <version>9.0.9</version>-->
+<!--        <reportSets>-->
+<!--          <reportSet>-->
+<!--            <reports>-->
+<!--              <report>aggregate</report>-->
+<!--            </reports>-->
+<!--          </reportSet>-->
+<!--        </reportSets>-->
+<!--      </plugin>-->
+<!--    </plugins>-->
+<!--  </reporting>-->
 
   <profiles>
     <profile>
