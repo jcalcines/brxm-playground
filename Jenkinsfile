@@ -15,7 +15,7 @@ pipeline {
     tools {
         maven 'Maven 3.9.6'
         jdk 'jdk 11'
-        dependency-check 'Dependency Check 9.1.0'
+//        dependency-check 'Dependency Check 9.1.0'
     }
 
     stages {
