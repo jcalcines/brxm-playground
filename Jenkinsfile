@@ -1,22 +1,22 @@
 def STAGE_BUILD = false
-def STAGE_MAVEN_DEPENDENCY_CHECK = false
 def STAGE_DEPENDENCY_CHECK = true
 
 pipeline {
     agent any
-        //https://www.jenkins.io/doc/book/pipeline/docker/
+
+    // https://www.jenkins.io/doc/book/pipeline/docker/
 //        { docker { image 'docker maven:3.5.4-jdk-11'}}
 
-//    environment {
-//        MAVEN_SETTINGS = credentials('maven-settings')
-//    }
-
-
-
-//    tools {
-//        maven 'Maven 3.5.4'
-//        jdk 'jdk11'
-//    }
+    /**
+     * The tools defined in this section need to be configured in Jenkins under
+     * Dashboard > Manage Jenkins > Tools
+     * https://http://jenkins.local:8080/manage/configureTools/
+     */
+    tools {
+        maven 'Maven 3.9.6'
+        jdk 'jdk 11'
+        dependency-check 'Dependency Check 9.1.0'
+    }
 
     stages {
         stage('Build') {
@@ -41,42 +41,16 @@ pipeline {
                 sh 'mvn -Pdist'
             }
         }
+        stage ()
 
-        stage('Vulnerability Scan Maven') {
-            when { expression { return STAGE_MAVEN_DC }}
-            steps {
-                sh 'mvn dependency-check:aggregate'
-            }
-        }
-
-        stage("Dependency check Publisher") {
+        stage("OWASP Dependency Check Publisher") {
             // https://www.jenkins.io/doc/pipeline/steps/dependency-check-jenkins-plugin/
             when { expression { return STAGE_DEPENDENCY_CHECK }}
             steps {
-                dependencyCheck skipOnScmChange: true, skipOnUpstreamChange: true
+                sh 'mvn dependency-check:aggregate'
 
-//                dependencyCheckPublisher
+                dependencyCheckPublisher pattern:dependency-check-report.xml
             }
         }
-    }
-
-    post {
-
-        always {
-            echo 'Summary: '
-        }
-        success {
-            echo '  The pipeline has ran successfully'
-        }
-        failure {
-            echo '  The pipeline has failed to run'
-        }
-        unstable {
-            echo '  This build has been marked as unstable'
-        }
-        fixed {
-            echo 'The pipeline is now stable'
-        }
-
     }
 }
