@@ -40,14 +40,16 @@ pipeline {
                 sh 'mvn -Pdist'
             }
         }
+
+        //TODO: Complete this stage
         stage("SBOM Update") {
             when { expression { return STAGE_DEPENDENCY_CHECK }}
             steps {
                 echo 'Generating Software Bill of materials (SBOM) file'
                 // Generate the SBOM from maven
-                //'sh mvn dependency:tree > sbom.log'
+                sh 'mvn dependency:tree > report/sbom/sbom.tmp'
                 // Checks if there are differences between source control SBOM and currently generated one
-                //'sh diff -q sbom.txt sbom.log'
+                //'sh diff -q report/sbom/sbom.txt report/sbom/sbom.tmp'
                 // If there are differences it replaces sbom.txt with sbom.log
                 // TODO
                 // Commits the changes to Source Control
