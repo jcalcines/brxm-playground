@@ -41,7 +41,16 @@ pipeline {
                 sh 'mvn -Pdist'
             }
         }
-        stage ()
+        stage ("SBOM Update") {
+            'mvn dependency:tree > sbom.log'
+            // Checks if there are differences between source control SBOM and currently generated one
+            //'sh diff -q sbom.txt sbom.log'
+            // If there are differences it replaces sbom.txt with sbom.log
+            // TODO
+            // Commits the changes to Source Control
+            // git commit sbom.txt -m"Software Bill of Materials updated"
+            // git push
+        }
 
         stage("OWASP Dependency Check Publisher") {
             // https://www.jenkins.io/doc/pipeline/steps/dependency-check-jenkins-plugin/
