@@ -17,6 +17,20 @@ Run the following command:
 
      mvn dependency-check:aggregate
 
+Jenkins Pipeline
+===============
+
+Jenkinsfile is a file that contains all the configuration related to the Pipeline for this project. 
+
+However, you need to be aware that part of this configuration need to be done in Jenkins. Any tool defined on the tools
+section (including Docker) need to be defined in Jenkins
+
+For this project Pipeline the following tools are needed:
+- Maven 3.9.6
+- jdk 11
+- Dependency Check 9.1.0
+
+
 Running Locally
 ===============
 
