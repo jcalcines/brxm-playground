@@ -65,7 +65,7 @@ pipeline {
                 // Generates the report from Maven Configuration
                 sh 'mvn dependency-check:aggregate'
                 // Uses the Jenkins Plugin to display a summary of the report
-                dependencyCheckPublisher pattern: 'report/owasp/*/dependency-check-report.xml', failedTotalCritical: 1, unstableNewHigh: 15
+                dependencyCheckPublisher pattern: 'report/owasp/*/dependency-check-report.xml', failedTotalCritical: 1, unstableNewHigh: 1
             }
             post {
                 failure {
