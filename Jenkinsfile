@@ -43,7 +43,8 @@ pipeline {
         stage("SBOM Update") {
             when { expression { return STAGE_DEPENDENCY_CHECK }}
             steps {
-                // Geerate the SBOM from maven
+                echo 'Generating Software Bill of materials (SBOM) file'
+                // Generate the SBOM from maven
                 //'sh mvn dependency:tree > sbom.log'
                 // Checks if there are differences between source control SBOM and currently generated one
                 //'sh diff -q sbom.txt sbom.log'
