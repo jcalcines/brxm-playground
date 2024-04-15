@@ -15,7 +15,6 @@ pipeline {
     tools {
         maven 'Maven 3.9.6'
         jdk 'jdk 11'
-//        dependency-check 'Dependency Check 9.1.0'
     }
 
     stages {
@@ -44,7 +43,8 @@ pipeline {
         stage("SBOM Update") {
             when { expression { return STAGE_DEPENDENCY_CHECK }}
             steps {
-                maven 'dependency:tree > sbom.log'
+                // Geerate the SBOM from maven
+                //'sh dependency:tree > sbom.log'
                 // Checks if there are differences between source control SBOM and currently generated one
                 //'sh diff -q sbom.txt sbom.log'
                 // If there are differences it replaces sbom.txt with sbom.log
