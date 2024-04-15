@@ -60,9 +60,10 @@ pipeline {
             // https://www.jenkins.io/doc/pipeline/steps/dependency-check-jenkins-plugin/
             when { expression { return STAGE_DEPENDENCY_CHECK }}
             steps {
+                // Generates the report from Maven Configuration
                 sh 'mvn dependency-check:aggregate'
-
-                dependencyCheckPublisher pattern:dependency-check-report.xml
+                // Uses the Jenkins Plugin to display a summary of the report
+                dependencyCheckPublisher pattern: 'report/owasp/*/dependency-check-report.xml'
             }
         }
     }

@@ -1,5 +1,8 @@
-#VSCODE
-.vscode/
+# Maven
+target/
+storage*/
+overlays/
+report/**/dependency-check-report.xml
 
 # IntelliJ
 .idea/
@@ -9,15 +12,13 @@
 out/
 atlassian-ide-plugin.xml
 
+#VSCODE
+.vscode/
+
 # Eclipse
 .project
 .classpath
 .settings/
-
-# Maven
-target/
-storage*/
-overlays/
 
 ## OSX
 .DS_Store
