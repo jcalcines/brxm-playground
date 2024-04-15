@@ -34,13 +34,15 @@
         <notes>
             <![CDATA[
             BloomReach don't use this version of the library but use for v15.5.0 have jackrabbit-spi:2.21.19-h2
+
+            Please notice that two packages are excluding by this waiver: spi and spi-commons
             ]]>
         </notes>
         <!--
             Once this waiver expires:
             - Validate that the SBOM doesn't contain this version of the library.
         -->
-        <sha1>afde7100f2eccb07064303e9ef91147d07ead7fc</sha1>
+        <packageUrl regex="true">^pkg:maven/org\.apache\.jackrabbit/jackrabbit\-spi(\-commons)?@2.7.4$</packageUrl>
         <cpe>cpe:/a:apache:jackrabbit</cpe>
         <vulnerabilityName>jackrabbit-spi-2.7.4.jar</vulnerabilityName>
     </suppress>
