@@ -65,7 +65,12 @@ pipeline {
                 // Generates the report from Maven Configuration
                 sh 'mvn dependency-check:aggregate'
                 // Uses the Jenkins Plugin to display a summary of the report
-                dependencyCheckPublisher pattern: 'report/owasp/*/dependency-check-report.xml'
+                dependencyCheckPublisher pattern: 'report/owasp/*/dependency-check-report.xml', failedTotalCritical: 1, unstableNewHigh: 15
+            }
+            post {
+                failure {
+                    mail bcc: '', body: 'TODO: Add link to Jenkins Job', cc: '', from: '', replyTo: '', subject: 'Critical vulnerabilities have been found on BloomReach Packages', to: 'jose.calcines@visitscotland.com'
+                }
             }
         }
     }
