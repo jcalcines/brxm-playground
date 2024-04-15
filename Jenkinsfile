@@ -1,4 +1,4 @@
-def STAGE_BUILD = false
+def STAGE_BUILD = true
 def STAGE_DEPENDENCY_CHECK = true
 
 pipeline {
