@@ -120,23 +120,6 @@
     </plugins>
   </build>
 
-<!--  <reporting>-->
-<!--    <plugins>-->
-<!--      <plugin>-->
-<!--        <groupId>org.owasp</groupId>-->
-<!--        <artifactId>dependency-check-maven</artifactId>-->
-<!--        <version>9.0.9</version>-->
-<!--        <reportSets>-->
-<!--          <reportSet>-->
-<!--            <reports>-->
-<!--              <report>aggregate</report>-->
-<!--            </reports>-->
-<!--          </reportSet>-->
-<!--        </reportSets>-->
-<!--      </plugin>-->
-<!--    </plugins>-->
-<!--  </reporting>-->
-
   <profiles>
     <profile>
       <id>default</id>
