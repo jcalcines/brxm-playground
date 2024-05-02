@@ -44,4 +44,8 @@ Access the Bloomreach setup application at <http://localhost:8080/essentials>.
 After your project is set up, access the CMS at <http://localhost:8080/cms> and the site at <http://localhost:8080/playground>.
 Logs are located in target/tomcat9x/logs
 
+References
+==========
+- [How to run a standard BloomReach Project](doc/br-default.md)
+
 
