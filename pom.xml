@@ -137,7 +137,12 @@
         <module>essentials</module>
       </modules>
     </profile>
-
+    <profile>
+      <id>dist</id>
+    </profile>
+    <profile>
+      <id>dist-with-development-data</id>
+    </profile>
   </profiles>
 
 </project>
