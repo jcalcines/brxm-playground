@@ -60,12 +60,17 @@
   <!-- End of emptied/overridden metadata from parent hippo-cms7-release pom. -->
 
   <properties>
-
+    <junit.jupiter.version>5.10.1</junit.jupiter.version>
   </properties>
 
   <dependencyManagement>
     <dependencies>
-
+      <dependency>
+        <groupId>org.junit.jupiter</groupId>
+        <artifactId>junit-jupiter</artifactId>
+        <version>${junit.jupiter.version}</version>
+        <scope>test</scope>
+      </dependency>
     </dependencies>
   </dependencyManagement>
 
@@ -73,7 +78,41 @@
     <defaultGoal>package</defaultGoal>
     <pluginManagement>
       <plugins>
+      <plugin>
+        <groupId>org.owasp</groupId>
+        <artifactId>dependency-check-maven</artifactId>
+        <version>9.0.9</version>
+        <configuration>
+          <outputDirectory>report/owasp/${hippo.cms.version}</outputDirectory>
+          <suppressionFiles>
+            <file>src/main/resources/suppressed-cves.xml</file>
+          </suppressionFiles>
 
+          <excludes>
+            <!-- Note: we could have included the project dependency located at
+            [project-name]-essentials, but we included these dependencies instead so the
+            configuration can be copied to other projects -->
+            <exclude>org.onehippo.cms7:hippo-essentials-dashboard</exclude>
+            <exclude>org.onehippo.cms7:hippo-essentials-dashboard-dependencies</exclude>
+          </excludes>
+
+          <!-- JavaScript Dependencies are resolved via Node -->
+          <nodeAnalyzerEnabled>false</nodeAnalyzerEnabled>
+          <nodeAuditAnalyzerEnabled>false</nodeAuditAnalyzerEnabled>
+          <retireJsAnalyzerEnabled>false</retireJsAnalyzerEnabled>
+          <formats>
+            <format>HTML</format>
+            <format>XML</format>
+          </formats>
+        </configuration>
+        <executions>
+          <execution>
+            <goals>
+              <goal>check</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
       </plugins>
     </pluginManagement>
     <plugins>
@@ -98,7 +137,12 @@
         <module>essentials</module>
       </modules>
     </profile>
-
+    <profile>
+      <id>dist</id>
+    </profile>
+    <profile>
+      <id>dist-with-development-data</id>
+    </profile>
   </profiles>
 
 </project>
