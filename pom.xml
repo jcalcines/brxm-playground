@@ -47,16 +47,6 @@
   </scm>
   -->
   <ciManagement/>
-  <distributionManagement>
-    <repository>
-      <id>-</id>
-      <url>-</url>
-    </repository>
-    <snapshotRepository>
-      <id>-</id>
-      <url>-</url>
-    </snapshotRepository>
-  </distributionManagement>
   <!-- End of emptied/overridden metadata from parent hippo-cms7-release pom. -->
 
   <properties>
@@ -73,6 +63,18 @@
       </dependency>
     </dependencies>
   </dependencyManagement>
+
+  <distributionManagement>
+    <repository>
+      <id>vs-poc</id>
+      <url>${vs-poc.repo}</url>
+    </repository>
+    <snapshotRepository>
+      <id>snapshots-poc</id>
+      <url>${vs-poc.snapshots}</url>
+    </snapshotRepository>
+  </distributionManagement>
+
 
   <build>
     <defaultGoal>package</defaultGoal>
